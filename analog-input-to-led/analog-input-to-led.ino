@@ -10,13 +10,16 @@ void setup()
   pinMode(redLedPin, OUTPUT);
   pinMode(yellowLedPin, OUTPUT);
   pinMode(greenLedPin, OUTPUT);
+
+  Serial.begin(9600);
 }
 
 
 
 void loop()
 {
-  sensorValue = 171;
+  Serial.println(analogRead(A0));
+  sensorValue = analogRead(A0);
 
   if (sensorValue >= 0 and sensorValue < 85) {
     digitalWrite(redLedPin, HIGH);
