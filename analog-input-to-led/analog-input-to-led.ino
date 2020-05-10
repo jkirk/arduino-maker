@@ -19,13 +19,13 @@ void setup()
 void loop()
 {
   Serial.println(analogRead(A0));
-  sensorValue = analogRead(A0);
+  sensorValue = analogRead(A0); // analog input range from 0 - 1023
 
-  if (sensorValue >= 0 and sensorValue < 85) {
+  if (sensorValue >= 0 and sensorValue < 341) {
     digitalWrite(redLedPin, HIGH);
     digitalWrite(yellowLedPin, LOW);
     digitalWrite(greenLedPin, LOW);
-  } else if (sensorValue >= 85 and sensorValue < 170) {
+  } else if (sensorValue >= 341 and sensorValue < 682) {
     digitalWrite(redLedPin, LOW);
     digitalWrite(yellowLedPin, HIGH);
     digitalWrite(greenLedPin, LOW);
